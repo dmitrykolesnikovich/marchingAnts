@@ -1,10 +1,9 @@
 package marchingAnts;
 
+import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
-import javax.swing.*;
 
 // MarchingAnts http://stackoverflow.com/a/9772978/909169
 
@@ -27,6 +26,9 @@ public class SelectionCanvas extends Canvas {
   @Override
   public void paint(Graphics graphics) {
     super.paint(graphics);
+    if (dashedStroke == null) {
+      return;
+    }
     Graphics2D g = (Graphics2D) graphics;
     g.setColor(Color.BLACK);
     g.setStroke(dashedStroke);
