@@ -10,13 +10,7 @@ public class Main extends JPanel {
   private final SelectionCanvas selectionCanvas = new SelectionCanvas();
 
   public Main() {
-    addMouseListener(new MouseAdapter() {
-      @Override
-      public void mousePressed(MouseEvent e) {
-        super.mousePressed(e);
-        selectionCanvas.setBounds(e.getX(), e.getY(), 200, 200);
-      }
-    });
+    selectionCanvas.setPanel(this);
   }
 
   @Override
